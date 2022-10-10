@@ -39,14 +39,14 @@ If necessary, add username and password in `config/database.yml` for development
 ```
 development:
   <<: *default
-  database: Recipe_app_development
+  database: Budget_app_development
   host: ''
   username:
   password:
   
   test:
   <<: *default
-  database: Recipe_app_test
+  database: Budget_app_test
   username:
   password:
 ```
@@ -166,20 +166,20 @@ end
 - Twitter: [@mikemtzp](https://twitter.com/mikemtzp)
 - LinkedIn: [Mike Martínez](https://www.linkedin.com/in/mike-mart%C3%ADnez/)
 
-### Gabriel Fonseca
-
-- GitHub: [@Gopxfs](https://github.com/Gopxfs)
-- LinkedIn: [Gabriel Fonseca Sales](https://www.linkedin.com/in/gabriel-fonseca-sales/)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/mikemtzp/Recipe_app/issues).
+Feel free to check the [issues page](https://github.com/mikemtzp/Budget_app/issues).
 
 ## ⭐️ Show your support
 
 Give a ⭐️ if you like this project!
 
+## 🥇 Acknowledgments
+
+- This project was built based on the original template design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) in [Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=).
+- This README.md was elaborated with the [Microverse readme-template](https://github.com/microverseinc/readme-template)
+
 ## 📝 License
 
-[MIT License](https://github.com/mikemtzp/Recipe_app/blob/dev/LICENSE)
+[MIT License](https://github.com/mikemtzp/Budget_app/blob/dev/LICENSE)
