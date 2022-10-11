@@ -23,7 +23,7 @@
     <li><i class="fa-solid fa-bars"></i></li>
     <li><p>REGISTER</p></li>
     <li>
-      <%= button_to "Logout", destroy_user_session_path, { method: :delete, data: { turbo:false }}%>
+      <%= button_to "Logout", destroy_user_session_path, :class => "login-signup-button", method: :delete, data: { turbo:false } %>
     </li>
   <% end %>
     

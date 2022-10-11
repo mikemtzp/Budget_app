@@ -6,13 +6,11 @@
 
   &-ul {
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
-    @include flex(row, center);
-
-    & > * {
-      margin-right: auto;
-      color: $background;
-    }
+    & :nth-child(2) { justify-self: center; }
+    & > * { color: $background; }
   }
 }
 
