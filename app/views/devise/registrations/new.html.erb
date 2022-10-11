@@ -2,8 +2,8 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field">
     <i class="fa-solid fa-user fa-2xl"></i>
-    <%= f.label :picture, "Upload picture" %>
-    <%= f.file_field :picture, accept: 'image/png,image/gif,image/jpeg,image/jpg', multiple: true, class: "file" %>
+    <%= f.label :picture, "Upload picture", class: "field-label" %>
+    <%= f.file_field :picture, accept: 'image/png,image/gif,image/jpeg,image/jpg', multiple: true, class: "field-label__file" %>
   </div>
   <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name" %>
   <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>

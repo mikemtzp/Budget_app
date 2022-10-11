@@ -40,9 +40,18 @@
   background-color: #fff;
   border-bottom: 1px solid rgba($color: $text-color, $alpha: 0.2);
   color: rgba($color: $text-color, $alpha: 0.4);
+
+  &-label {
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+
+    &:hover { text-decoration: underline; }
+
+    &__file { display: none; }
+  }
 }
 
-.file { display: none; }
 .fa-user::before { color: rgba($color: $text-color, $alpha: 0.2); }
 
 .forgot-button {
