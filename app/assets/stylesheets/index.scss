@@ -20,6 +20,7 @@ body {
 
 .splash {
   @include flex(column, center);
+
   min-height: 100vh;
 
   & button { cursor: pointer; }
@@ -39,16 +40,18 @@ body {
 
   &-login {
     background-color: $main-color;
+
     @include splash-buttons;
+
     color: $background;
 
     &:hover { @include button-hover; }
-
   }
 
   &-signup {
     background-color: $background;
     color: $text-color;
+
     @include splash-buttons;
 
     &:hover { @include button-hover; }

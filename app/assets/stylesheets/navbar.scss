@@ -6,13 +6,13 @@
 
   &-ul {
     list-style: none;
+
     @include flex(row, center);
 
     & > * {
       margin-right: auto;
       color: $background;
     }
-
   }
 }
 
@@ -25,5 +25,3 @@
     color: $secondary-color;
   }
 }
-
-

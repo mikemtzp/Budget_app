@@ -9,9 +9,9 @@ $margin-title: 0 0 1.5rem 0;
 $transition: 0.3s;
 
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('/assets/Proxima-Nova.otf');
-  }
+  font-family: 'Proxima Nova';
+  src: url('/assets/Proxima-Nova.otf');
+}
 
 @mixin flex ($position, $justify) {
   display: flex;
@@ -32,7 +32,7 @@ $transition: 0.3s;
 
 @mixin button-hover {
   transition: $transition;
-  box-shadow: 0px 0px 2px 1px black;
+  box-shadow: 0 0 2px 1px black;
 }
 
 @mixin headline {
