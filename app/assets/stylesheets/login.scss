@@ -1,0 +1,13 @@
+@import 'mixins';
+
+.login-button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  padding: 0.5rem 0.5rem;
+  background: none;
+  border: none;
+  color: $background;
+  font-family: $font;
+}
+
