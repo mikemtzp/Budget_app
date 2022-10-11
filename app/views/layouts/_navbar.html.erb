@@ -18,6 +18,14 @@
     </li>
     <li><p>REGISTER</p></li>
   <% end %>
+
+  <% if (current_page?(groups_path) && user_signed_in?) %>
+    <li><i class="fa-solid fa-bars"></i></li>
+    <li><p>REGISTER</p></li>
+    <li>
+      <%= button_to "Logout", destroy_user_session_path, { method: :delete, data: { turbo:false }}%>
+    </li>
+  <% end %>
     
   </ul>
 </nav>
