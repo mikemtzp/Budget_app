@@ -19,7 +19,7 @@
   & [type="password"], [type="email"]  {
     width: 100%;
     outline: none;
-    padding: 0.5rem;
+    padding: 0.7rem;
     border: none;
     background-color: #fff;
     border-bottom: 1px solid rgba($color: $text-color, $alpha: 0.2);
@@ -32,5 +32,5 @@
   display: block;
   text-align: center;
   text-decoration: none;
-  color: rgba($color: $text-color, $alpha: 0.6);
+  color: rgba($color: $text-color, $alpha: 0.4);
 }
