@@ -1,0 +1,28 @@
+@import 'mixins';
+
+.navbar {
+  background-color: $main-color;
+  padding: 0.5rem 0.5rem;
+
+  &-ul {
+    list-style: none;
+    @include flex(row, center);
+
+    & > * {
+      margin-right: auto;
+    }
+
+  }
+}
+
+.back-to {
+  color: $background;
+  transition: $transition;
+
+  &:hover {
+    transition: $transition;
+    color: $secondary-color;
+  }
+}
+
+

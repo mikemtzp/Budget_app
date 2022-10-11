@@ -1,7 +1,14 @@
-<nav>
-  <ul>
+<nav class="navbar">
+  <ul class="navbar-ul">
+
+  <% if current_page?(new_user_session_path) %>
     <li>
-      <p>Hi</p>
+      <%= link_to root_path, class: "back-to" do %>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
+      <% end %>
     </li>
+    <li><p>LOGIN</p></li>
+  <% end %>
+    
   </ul>
 </nav>

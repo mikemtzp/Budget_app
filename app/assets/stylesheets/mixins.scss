@@ -58,5 +58,4 @@ $transition: 0.3s;
 @mixin icon($unicode) {
   font: var(--fa-font-solid);
   content: '#{$unicode}';
-  margin-right: 0.5rem;
 }
