@@ -9,6 +9,15 @@
     </li>
     <li><p>LOGIN</p></li>
   <% end %>
+
+  <% if current_page?(new_user_registration_path) %>
+    <li>
+      <%= link_to root_path, class: "back-to" do %>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
+      <% end %>
+    </li>
+    <li><p>REGISTER</p></li>
+  <% end %>
     
   </ul>
 </nav>

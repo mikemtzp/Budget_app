@@ -1,6 +1,6 @@
 @import 'mixins';
 
-.login-button {
+.login-signup-button {
   position: absolute;
   top: 1px;
   right: 1px;
@@ -9,6 +9,7 @@
   border: none;
   color: $background;
   font-family: $font;
+  font-weight: lighter;
 }
 
 .new_user {
@@ -16,7 +17,7 @@
   margin-bottom: 1.5rem;
   border-top: 1px solid rgba($color: $text-color, $alpha: 0.2);
 
-  & [type="password"], [type="email"]  {
+  & [type="password"], [type="email"], [type="text"] {
     width: 100%;
     outline: none;
     padding: 0.7rem;
@@ -24,9 +25,25 @@
     background-color: #fff;
     border-bottom: 1px solid rgba($color: $text-color, $alpha: 0.2);
 
-    &::placeholder { color: rgba($color: $text-color, $alpha: 0.4); }
+    &::placeholder {
+      color: rgba($color: $text-color, $alpha: 0.4);
+      font-family: $font;
+    }
   }
 }
+
+.field {
+  width: 100%;
+  outline: none;
+  padding: 1rem;
+  border: none;
+  background-color: #fff;
+  border-bottom: 1px solid rgba($color: $text-color, $alpha: 0.2);
+  color: rgba($color: $text-color, $alpha: 0.4);
+}
+
+.file { display: none; }
+.fa-user::before { color: rgba($color: $text-color, $alpha: 0.2); }
 
 .forgot-button {
   display: block;
