@@ -1,10 +1,12 @@
 $main-color: #3778c2;
 $secondary-color: #5fb523;
 $text-color: #434b54;
+$background: #f1f3f2;
 $font: system-ui, -apple-system, blinkmacsystemfont, 'Helvetica Neue', 'Proxima Nova';
 $headline-size: 2.5rem;
 $general-text-size: 1.5rem;
 $margin-title: 0 0 1.5rem 0;
+$transition: 0.3s;
 
 @font-face {
   font-family: 'Proxima Nova';
@@ -19,11 +21,17 @@ $margin-title: 0 0 1.5rem 0;
   margin: 0 auto auto auto;
 }
 
-@mixin box ($padding) {
-  padding: $padding;
-  background: $box-background-color;
-  border-radius: 20px;
-  box-shadow: 20px 15px 80px -25px $black;
+@mixin splash-buttons {
+  padding: 0.7rem 0;
+  border: none;
+  border-radius: 2px;
+  width: 80%;
+  transition: $transition;
+}
+
+@mixin button-hover {
+  transition: $transition;
+  box-shadow: 0px 0px 2px 1px black;
 }
 
 @mixin headline {
