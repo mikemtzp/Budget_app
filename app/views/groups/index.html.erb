@@ -2,7 +2,7 @@
 
 <div id="groups">
   <% if @groups.count.zero? %>
-    <p><em>No groups available for the moment</em></p>
+    <p class="center-message"><em>No groups available for the moment</em></p>
   <% else %>
     <% @groups.each do |group| %>
       <%= render group %>

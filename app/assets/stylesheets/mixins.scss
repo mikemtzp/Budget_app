@@ -59,3 +59,12 @@ $transition: 0.3s;
   font: var(--fa-font-solid);
   content: '#{$unicode}';
 }
+
+@mixin center($top) {
+  position: absolute;
+  text-decoration: none;
+  text-align: center;
+  top: $top;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
