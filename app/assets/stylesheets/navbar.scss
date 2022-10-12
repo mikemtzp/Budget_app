@@ -10,12 +10,19 @@
     grid-template-columns: 1fr 1.8fr 1fr;
 
     & :nth-child(2) { justify-self: center; }
-    & :last-child { justify-self: center; }
+    & :nth-child(3) { justify-self: flex-end; }
     & > * { color: $background; }
 
-    &__logout {
-      text-decoration: none;
-      color: $background;
+    &-li {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+
+      &__logout {
+        text-decoration: none;
+        color: $background;
+        margin-left: 5px;
+      }
     }
   }
 }
