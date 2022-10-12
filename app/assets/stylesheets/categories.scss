@@ -13,3 +13,25 @@ label { margin: 1rem 0 0 1rem; }
 }
 
 .category-name { padding: 0.5rem; }
+
+.groups {
+  & ul:nth-child(even) { background: rgba($color: $secondary-color, $alpha: 0.5); }
+}
+
+.category {
+  cursor: pointer;
+
+  &-unit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    justify-items: center;
+    text-decoration: none;
+    color: black;
+    & > * { margin: 1rem; }
+
+    &__icon {
+      
+    }
+  }
+}

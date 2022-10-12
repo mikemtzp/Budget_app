@@ -57,8 +57,8 @@
     <%= form.label 'Select an icon', style: "display: block" %>
     <div>
       <% groups.each do |group| %>
-        <div id="icon_<%= group['title'] %>" class="icon" onClick="selectIcon('<%= group[:icon] %>')">
-          <i class="<%= group[:icon] %>"></i>
+        <div id="icon_<%= group[:title] %>" class="icon" onClick="selectIcon('<%= group[:icon] %>')">
+          <i class="<%= group[:icon] %> fa-lg"></i>
           <p>text <%= group[:title] %></p>
         </div>
       <% end %>

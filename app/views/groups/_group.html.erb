@@ -1,11 +1,11 @@
-<div id="<%= dom_id group %>">
-  <%= link_to group do %>
-    <p>
-      <i class="<%= group.icon %>"></i>
-    </p>
+<ul id="<%= dom_id group %>" class="category">
+  <%= link_to expenses_path, class:"category-unit" do %>
+    <li class="category-unit__icon">
+      <i class="<%= group.icon %> fa-2xl"></i>
+    </li>
 
-    <p>
+    <li>
       <%= group.name %>
-    </p>
+    </li>
   <% end %>
-</div>
+</ul>
