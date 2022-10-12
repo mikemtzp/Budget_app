@@ -1,5 +1,8 @@
 @import 'mixins';
 
+form { margin-top: 1rem;}
+label { margin: 1rem 0 0 1rem; }
+
 .add-button {
   @include center(90%);
 }
@@ -8,3 +11,5 @@
   @include center(50%);
   width: 80%;
 }
+
+.category-name { padding: 0.5rem; }

@@ -1,4 +1,42 @@
+<% groups = [
+    {
+      icon: 'fa-solid fa-bowl-food',
+      title: 'Food',
+    },
+    {
+      icon: 'fa-solid fa-shirt',
+      title: 'Clothing',
+    },
+    {
+      icon: 'fa-solid fa-house-chimney',
+      title: 'Household',
+    },
+    {
+      icon: 'fa-solid fa-plane',
+      title: 'Travel',
+    },
+    {
+      icon: 'fa-solid fa-briefcase-medical',
+      title: 'Healthcare',
+    },
+    {
+      icon: 'fa-solid fa-car-side',
+      title: 'Transportation',
+    },
+    {
+      icon: 'fa-solid fa-piggy-bank',
+      title: 'Savings',
+    },
+    {
+      icon: '<i class="fa-solid fa-paw"></i>',
+      title: 'Pet',
+    },
+  ] %>
+
 <%= form_with(model: group) do |form| %>
+
+<%= form.hidden_field :icon, required: 'required' %>
+
   <% if group.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
@@ -12,16 +50,38 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"field category-name", placeholder: "Name" %>
   </div>
 
   <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+    <%= form.label 'Select an icon', style: "display: block" %>
+    <div>
+      <% groups.each do |group| %>
+        <div id="icon_<%= group['title'] %>" class="icon" onClick="selectIcon('<%= group[:icon] %>')">
+          <i class="<%= group[:icon] %>"></i>
+          <p>text <%= group[:title] %></p>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit 'Add', class:"splash-login add-button" %>
   </div>
 <% end %>
+
+<script>
+  const icon = document.getElementsByClassName('icon');
+
+  const clearAll = () => {
+    for(let i = 0 ; i < icon.length ; i += 1) {
+      icon[i].classList.remove('icon-active');
+    }
+  }  
+
+  const selectIcon = (icon) => {
+    clearAll();
+    document.getElementById('group_icon').value = icon;
+    document.getElementById(`icon_${title}`).classList.add('icon-active');
+  }
+</script>
