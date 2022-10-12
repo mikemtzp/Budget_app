@@ -23,7 +23,8 @@
     <li><i class="fa-solid fa-bars"></i></li>
     <li><p>CATEGORIES</p></li>
     <li>
-      <%= button_to "Logout", destroy_user_session_path, :class => "login-signup-button", method: :delete, data: { turbo:false } %>
+      <%= current_user.name %> |
+      <%= link_to "Logout", destroy_user_session_path, :class => "navbar-ul__logout", method: :delete, data: { turbo:false } %>
     </li>
   <% end %>
 
