@@ -3,7 +3,8 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    @groups = Category.where(user_id: current_user).order('name ASC')
+    @total = @group.expenses
   end
 
   # GET /groups/1 or /groups/1.json

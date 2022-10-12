@@ -1,12 +1,11 @@
 <div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
+  <%= link_to group do %>
+    <p>
+      <%= group.icon %>
+    </p>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
-
+    <p>
+      <%= group.name %>
+    </p>
+  <% end %>
 </div>
