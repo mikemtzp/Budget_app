@@ -28,7 +28,7 @@
       title: 'Savings',
     },
     {
-      icon: '<i class="fa-solid fa-paw"></i>',
+      icon: 'fa-solid fa-paw',
       title: 'Pet',
     },
   ] %>
@@ -53,34 +53,34 @@
     <%= form.text_field :name, class:"field category-name", placeholder: "Name" %>
   </div>
 
-  <div>
+  <div class="new-category-container">
     <%= form.label 'Select an icon', style: "display: block" %>
-    <div>
+    <div class="new-category-container-icon">
       <% groups.each do |group| %>
-        <div id="icon_<%= group[:title] %>" class="icon" onClick="selectIcon('<%= group[:icon] %>')">
-          <i class="<%= group[:icon] %> fa-lg"></i>
-          <p>text <%= group[:title] %></p>
+        <div id="icon_<%= group[:title] %>" class="new-category-container-icon__card" onClick="selectIcon('<%= group[:icon] %>', '<%= group[:title] %>')">
+          <p><i class="<%= group[:icon] %> fa-2xl new-category-container-icon__card__item"></i></p>
+          <p><%= group[:title] %></p>
         </div>
       <% end %>
     </div>
   </div>
 
-  <div>
-    <%= form.submit 'Add', class:"splash-login add-button" %>
+  <div class="add-category">
+    <%= form.submit 'Add', class:"splash-login add-category-button" %>
   </div>
 <% end %>
 
 <script>
-  const icon = document.getElementsByClassName('icon');
+  const icon = document.getElementsByClassName('new-category-container-icon__card');
 
-  const clearAll = () => {
+  const clearActiveClass = () => {
     for(let i = 0 ; i < icon.length ; i += 1) {
       icon[i].classList.remove('icon-active');
     }
   }  
 
-  const selectIcon = (icon) => {
-    clearAll();
+  const selectIcon = (icon, title) => {
+    clearActiveClass();
     document.getElementById('group_icon').value = icon;
     document.getElementById(`icon_${title}`).classList.add('icon-active');
   }
