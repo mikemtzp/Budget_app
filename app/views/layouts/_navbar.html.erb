@@ -26,6 +26,15 @@
       <%= button_to "Logout", destroy_user_session_path, :class => "login-signup-button", method: :delete, data: { turbo:false } %>
     </li>
   <% end %>
+
+  <% if current_page?(new_group_path) %>
+    <li>
+      <%= link_to groups_path, class: "back-to" do %>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
+      <% end %>
+    </li>
+    <li><p>NEW CATEGORY</p></li>
+  <% end %>
     
   </ul>
 </nav>
