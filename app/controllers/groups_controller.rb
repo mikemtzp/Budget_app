@@ -3,8 +3,7 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = Category.where(user_id: current_user).order('name ASC')
-    @total = @group.expenses
+    @groups = Group.where(user_id: current_user).order('name ASC')
   end
 
   # GET /groups/1 or /groups/1.json
@@ -65,6 +64,6 @@ class GroupsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def group_params
-    params.require(:group).permit(:name, :icon)
+    params.require(:group).permit(:name, :icon, :user_id)
   end
 end
