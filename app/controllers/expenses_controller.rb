@@ -4,8 +4,7 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    @group = Group.find(params[:group_id])
-    @expenses = @group.expenses
+    @expenses = @group.expenses.order('created_at DESC')
   end
 
   # GET /expenses/1 or /expenses/1.json
@@ -14,6 +13,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = Expense.new
+    @groups = current_user.groups.order('name ASC')
   end
 
   # GET /expenses/1/edit
