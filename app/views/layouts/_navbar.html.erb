@@ -36,6 +36,28 @@
     </li>
     <li><p>NEW CATEGORY</p></li>
   <% end %>
+
+<% if params[:controller] == 'expenses' && params[:action] == 'index' %>
+    <li>
+      <%= link_to groups_path, class: "back-to" do %>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
+      <% end %>
+    </li>
+    <li><p>TRANSACTIONS</p></li>
+    <li class="navbar-ul-li">
+      <%= current_user.name %> |
+      <%= link_to "Logout", destroy_user_session_path, :class => "navbar-ul-li__logout", method: :delete, data: { turbo_method: :delete } %>
+    </li>
+  <% end %>
+
+  <% if params[:controller] == 'expenses' && params[:action] == 'new' %>
+    <li>
+      <%= link_to :back, class: "back-to" do %>
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
+      <% end %>
+    </li>
+    <li><p>NEW TRANSACTION</p></li>
+  <% end %>
     
   </ul>
 </nav>
