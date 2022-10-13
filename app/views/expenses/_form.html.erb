@@ -21,38 +21,13 @@
     <%= form.number_field :amount, min: 1.0, step: 0.5 %>
   </div>
 
-  <%# <%= form.text_field :user_id, value: current_user %>
-
   <div class="new-category-container">
-    <%= form.label 'Select at least one category', style: "display: block" %>
+    <%= form.label :groups, '(OPTIONAL) Select an extra category', style: "display: block" %>
     <div class="new-category-container-icon">
-      <% @groups.each do |group| %>
-        <div id="icon_<%= group[:name] %>" class="new-category-container-icon__card" onClick="selectIcon('<%= group[:icon] %>', '<%= group[:name] %>')">
-          <p><i class="<%= group[:icon] %> fa-2xl new-category-container-icon__card__item"></i></p>
-          <p><%= group[:name] %></p>
-        </div>
-      <% end %>
-    </div>
+      <%= form.collection_check_boxes(:groups, @groups, :id, :name)%>
   </div>
 
   <div class="add-category">
     <%= form.submit 'Save', class:"splash-login add-category-button" %>
   </div>
 <% end %>
-
-<script>
-  const icon = document.getElementsByClassName('new-category-container-icon__card');
-
-  const clearActiveClass = () => {
-    for(let i = 0 ; i < icon.length ; i += 1) {
-      icon[i].classList.remove('icon-active');
-    }
-  }  
-
-  const selectIcon = (icon, title) => {
-    clearActiveClass();
-    document.getElementById('group_icon').value = icon;
-    document.getElementById(`icon_${title}`).classList.add('icon-active');
-  }
-</script>
-

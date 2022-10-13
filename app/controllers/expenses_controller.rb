@@ -14,6 +14,7 @@ class ExpensesController < ApplicationController
   def new
     @expense = Expense.new
     @groups = current_user.groups.order('name ASC')
+    @groups = @groups.where.not(id: params[:group_id])
   end
 
   # GET /expenses/1/edit
@@ -24,6 +25,9 @@ class ExpensesController < ApplicationController
     @expense = Expense.new(expense_params)
     @expense.user = current_user
     @expense.groups << @group
+    params[:expense][:groups].each do |group_id|
+      @expense.groups << (Group.find(group_id)) unless group_id == ''
+    end
 
     respond_to do |format|
       if @expense.save
