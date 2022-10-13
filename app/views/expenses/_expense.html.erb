@@ -1,17 +1,16 @@
-<div id="<%= dom_id expense %>">
-  <p>
-    <strong>Name:</strong>
-    <%= expense.name %>
-  </p>
+<ul id="<%= dom_id expense %>" class="category">
+  <div class="category-unit">
+    <li>
+      <%= expense.name %>
+    </li>
 
-  <p>
-    <strong>Amount:</strong>
-    <%= expense.amount %>
-  </p>
+    <li>
+      $<%= expense.amount %>
+    </li>
 
-  <p>
-    <strong>User:</strong>
-    <%= expense.user_id %>
-  </p>
+    <li class="category-unit__date">
+      <%= expense.created_at.strftime("%H:%M | %b %d, %Y") %>
+    </li>
+  </div>
 
-</div>
+</ul>

@@ -1,7 +1,6 @@
 @import 'mixins';
 
 form { margin-top: 1rem; }
-// label { margin: 1rem 0 0 1rem; }
 
 .add-button {
   @include center(90%);
@@ -45,6 +44,11 @@ form { margin-top: 1rem; }
     text-decoration: none;
     color: black;
     & > * { margin: 1rem; }
+
+    &__date {
+      font-size: 0.65rem;
+      text-align: center;
+    }
   }
 }
 
