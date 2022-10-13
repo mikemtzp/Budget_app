@@ -73,8 +73,20 @@ form { margin-top: 1rem; }
       background: #fff;
     }
   }
+
+  &-group {
+    display: grid;
+    margin: 2rem 0;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    gap: 0.5rem;
+  }
 }
 
 .icon-active {
   border: 1px solid $secondary-color;
+}
+
+.test {
+  font-size: 2rem;
 }
