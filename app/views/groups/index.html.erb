@@ -5,7 +5,9 @@
     <p class="center-message"><em>No groups available for the moment</em></p>
   <% else %>
     <% @groups.each do |group| %>
-      <%= render group %>
+      <%= link_to group_expenses_path(group.id), class:"category-unit" do %>
+        <%= render group %>
+      <% end %>
     <% end %>
   <% end %>
 </div>
