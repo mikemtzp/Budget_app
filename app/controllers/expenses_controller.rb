@@ -23,6 +23,7 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     @expense.user = current_user
+    @expense.groups << @group
 
     respond_to do |format|
       if @expense.save
