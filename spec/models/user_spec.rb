@@ -6,7 +6,7 @@ RSpec.describe User, type: :model do
     @user.save
   end
 
-  it 'should required name to create a user' do
+  it 'should require name to create a user' do
     @user.name = nil
     expect(@user).to_not be_valid
   end

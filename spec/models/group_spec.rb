@@ -8,7 +8,7 @@ RSpec.describe Group, type: :model do
     @group.save
   end
 
-  it 'should required name to create a group' do
+  it 'should require name to create a group' do
     @group.name = nil
     expect(@group).to_not be_valid
   end
@@ -18,7 +18,7 @@ RSpec.describe Group, type: :model do
     expect(@group).to_not be_valid
   end
 
-  it 'should required icon to create a group' do
+  it 'should require icon to create a group' do
     @group.icon = nil
     expect(@group).to_not be_valid
   end
