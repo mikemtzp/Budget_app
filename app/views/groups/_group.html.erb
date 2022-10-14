@@ -1,11 +1,15 @@
 <ul id="<%= dom_id group %>" class="category">
-  <%= link_to expenses_path, class:"category-unit" do %>
-    <li class="category-unit__icon">
+  <%= link_to group_expenses_path(group.id), class: "category-unit" do %>
+    <li>
       <i class="<%= group.icon %> fa-2xl"></i>
     </li>
 
     <li>
       <%= group.name %>
+    </li>
+
+    <li>
+      $<%= group.expenses.sum(:amount) %>
     </li>
   <% end %>
 </ul>

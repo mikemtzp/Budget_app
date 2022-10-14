@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Expenses</h1>
-
-<div id="expenses">
-  <% @expenses.each do |expense| %>
-    <%= render expense %>
-    <p>
-      <%= link_to "Show this expense", expense %>
-    </p>
+<div id="expenses" class="groups">
+  <% if @expenses.count.zero? %>
+    <p class="center-message"><em>No transactions available for the moment</em></p>
+  <% else %>
+    <% @expenses.each do |expense| %>
+      <%= render expense %>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New expense", new_expense_path %>
+<div class="add-category">
+  <%= link_to "Add transaction", new_group_expense_path, class: "splash-login add-category-button"%>
+</div>

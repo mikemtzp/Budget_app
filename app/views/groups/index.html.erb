@@ -5,9 +5,11 @@
     <p class="center-message"><em>No groups available for the moment</em></p>
   <% else %>
     <% @groups.each do |group| %>
-      <%= render group %>
+      <%= render group, group: group %>
     <% end %>
   <% end %>
 </div>
 
-<%= link_to "Add category", new_group_path, class: "splash-login add-button" %>
+<div class="add-category">
+  <%= link_to "Add category", new_group_path, class: "splash-login add-category-button" %>
+</div>
