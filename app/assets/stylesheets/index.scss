@@ -1,0 +1,58 @@
+@import 'mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $font;
+  background-color: $background;
+}
+
+.fs { align-self: flex-start; }
+.fe { align-self: flex-end; }
+.mt { margin-top: 1rem; }
+.mb { margin-bottom: 1rem; }
+.nm { margin: 0; }
+
+.splash {
+  @include flex(column, center);
+
+  min-height: 100vh;
+
+  & button { cursor: pointer; }
+
+  &-logo {
+    width: 50%;
+    max-width: 180px;
+    margin-bottom: 8rem;
+  }
+
+  & form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-login {
+    background-color: $main-color;
+
+    @include splash-buttons;
+
+    color: $background;
+
+    &:hover { @include button-hover; }
+  }
+
+  &-signup {
+    background-color: $background;
+    color: $text-color;
+
+    @include splash-buttons;
+
+    &:hover { @include button-hover; }
+  }
+}

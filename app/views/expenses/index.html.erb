@@ -1,0 +1,13 @@
+<div id="expenses" class="groups">
+  <% if @expenses.count.zero? %>
+    <p class="center-message"><em>No transactions available for the moment</em></p>
+  <% else %>
+    <% @expenses.each do |expense| %>
+      <%= render expense %>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="add-category">
+  <%= link_to "Add transaction", new_group_expense_path, class: "splash-login add-category-button"%>
+</div>

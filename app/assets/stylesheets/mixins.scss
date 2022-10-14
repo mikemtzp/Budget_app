@@ -1,0 +1,71 @@
+$main-color: #3778c2;
+$secondary-color: #5fb523;
+$text-color: #434b54;
+$background: #f1f3f2;
+$font: 'Proxima Nova';
+$headline-size: 2.5rem;
+$general-text-size: 1.5rem;
+$margin-title: 0 0 1.5rem 0;
+$transition: 0.3s;
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/assets/Proxima-Nova.otf');
+}
+
+@mixin flex ($position, $justify) {
+  display: flex;
+  flex-direction: $position;
+  justify-content: $justify;
+  align-items: center;
+  margin: 0 auto auto auto;
+}
+
+@mixin splash-buttons {
+  padding: 0.7rem 0;
+  border: none;
+  border-radius: 2px;
+  width: 80%;
+  transition: $transition;
+  font-family: $font;
+  font-size: 1rem;
+}
+
+@mixin button-hover {
+  transition: $transition;
+  box-shadow: 0 0 2px 1px black;
+}
+
+@mixin headline {
+  font-family: $font;
+  color: $text-color;
+  font-size: $headline-size;
+  font-weight: bold;
+}
+
+@mixin general-text {
+  font-family: $font;
+  color: $text-color;
+  font-size: $general-text-size;
+  font-weight: normal;
+}
+
+@mixin trim-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin icon($unicode) {
+  font: var(--fa-font-solid);
+  content: '#{$unicode}';
+}
+
+@mixin center($top) {
+  position: absolute;
+  text-decoration: none;
+  text-align: center;
+  top: $top;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}

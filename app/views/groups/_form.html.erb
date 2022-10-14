@@ -1,0 +1,87 @@
+<% groups = [
+    {
+      icon: 'fa-solid fa-bowl-food',
+      title: 'Food',
+    },
+    {
+      icon: 'fa-solid fa-shirt',
+      title: 'Clothing',
+    },
+    {
+      icon: 'fa-solid fa-house-chimney',
+      title: 'Household',
+    },
+    {
+      icon: 'fa-solid fa-plane',
+      title: 'Travel',
+    },
+    {
+      icon: 'fa-solid fa-briefcase-medical',
+      title: 'Healthcare',
+    },
+    {
+      icon: 'fa-solid fa-car-side',
+      title: 'Transportation',
+    },
+    {
+      icon: 'fa-solid fa-piggy-bank',
+      title: 'Savings',
+    },
+    {
+      icon: 'fa-solid fa-paw',
+      title: 'Pet',
+    },
+  ] %>
+
+<%= form_with(model: group) do |form| %>
+
+<%= form.hidden_field :icon, required: 'required' %>
+
+  <% if group.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :name, class:"field category-name", placeholder: "Name", required: 'required' %>
+  </div>
+
+  <div class="new-category-container">
+    <%= form.label 'Select an icon', style: "display: block" %>
+    <div class="new-category-container-icon">
+      <% groups.each do |group| %>
+        <div id="icon_<%= group[:title] %>" class="new-category-container-icon__card" onClick="selectIcon('<%= group[:icon] %>', '<%= group[:title] %>')">
+          <p><i class="<%= group[:icon] %> fa-2xl new-category-container-icon__card__item"></i></p>
+          <p><%= group[:title] %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="add-category">
+    <%= form.submit 'Add', class:"splash-login add-category-button" %>
+  </div>
+<% end %>
+
+<script>
+  const icon = document.getElementsByClassName('new-category-container-icon__card');
+
+  const clearActiveClass = () => {
+    for(let i = 0 ; i < icon.length ; i += 1) {
+      icon[i].classList.remove('icon-active');
+    }
+  }  
+
+  const selectIcon = (icon, title) => {
+    clearActiveClass();
+    document.getElementById('group_icon').value = icon;
+    document.getElementById(`icon_${title}`).classList.add('icon-active');
+  }
+</script>
