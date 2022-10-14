@@ -49,6 +49,12 @@ form { margin-top: 1rem; }
       font-size: 0.65rem;
       text-align: center;
     }
+
+    &__expense {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
   }
 }
 

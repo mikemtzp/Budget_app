@@ -1,7 +1,12 @@
 <ul id="<%= dom_id expense %>" class="category">
   <div class="category-unit">
-    <li>
-      <%= expense.name %>
+    <li class="category-unit__expense">
+      <p><%= expense.name %></p>
+      <p>
+        <% expense.groups.each do |group| %>
+          <i class="<%= group.icon %>"></i>
+        <% end %>
+      </p>
     </li>
 
     <li>
