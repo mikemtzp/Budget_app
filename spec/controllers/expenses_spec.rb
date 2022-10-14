@@ -6,8 +6,6 @@ RSpec.describe 'Expense controller', type: :request do
     @user.save
     @group = Group.new(name: 'Bank', icon: 'fa-solid fa-piggy-bank', user: @user)
     @group.save
-    # @expense = Expense.new(name: 'Savings', amount: '20', user: @user)
-    # @expense.save
     sign_in(@user)
   end
 
