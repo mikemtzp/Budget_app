@@ -6,7 +6,7 @@
 - Ruby on Rails
 - RSpec
 
-## 📹 Video documentation(https://www.loom.com/share/bad9bf27da084db79d06a6c79747943c)
+## 📹 [Video documentation](https://www.loom.com/share/bad9bf27da084db79d06a6c79747943c)
 
 ## 🧮 Prerequisites
 
