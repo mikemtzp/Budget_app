@@ -7,7 +7,7 @@
 - RSpec
 
 ## 📹 [Video documentation](https://www.loom.com/share/bad9bf27da084db79d06a6c79747943c)
-
+## 💻 [Demo link](https://mikemtzp-budjet.herokuapp.com/)
 ## 🧮 Prerequisites
 
 ### Install
