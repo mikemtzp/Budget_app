@@ -1,13 +1,13 @@
-# Budget App
-> In the Budget app you can manage your budget by having a list of transactions associated with a category, so that you can see how much money you spent and on what, add a category, and a Transactions page where you can see your payments and add more. 
+# Budjet
+> In Budjet you can manage your budget by having a list of transactions associated with a category, so that you can see how much money you spent and on what, add a category, and a 'Transactions' page where you can see your payments and add more. 
 
 ## 🛠️ Built With
 
 - Ruby on Rails
 - RSpec
 
-## 📹 [Video documentation](https://www.loom.com/share/bad9bf27da084db79d06a6c79747943c)
-## 💻 [Demo link](https://mikemtzp-budjet.herokuapp.com/)
+## 📹 [Documentation](https://www.loom.com/share/bad9bf27da084db79d06a6c79747943c)
+## 💻 [Demo](https://buddget.onrender.com)
 ## 🧮 Prerequisites
 
 ### Install
