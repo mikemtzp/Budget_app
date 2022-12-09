@@ -7,7 +7,7 @@
 - RSpec
 
 ## 📹 [Documentation](https://www.loom.com/share/bad9bf27da084db79d06a6c79747943c)
-## 💻 [Demo](https://buddget.onrender.com)
+## 💻 [Demo](https://budjet.onrender.com)
 ## 🧮 Prerequisites
 
 ### Install
